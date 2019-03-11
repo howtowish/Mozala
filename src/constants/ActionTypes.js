@@ -1,0 +1,2 @@
+export const ON_GETREPOS = 'ON_GETREPOS'
+export const REPO_SELECTED='REPO_SELECTED'

@@ -1,0 +1,3 @@
+export const WELCOME_SCENE='WELCOME';
+export const REPOLIST_SCENE='REPOLIST';
+export const REPOINFO_SCENE='REPOINFO';
