@@ -3,6 +3,9 @@ import { Container, Header, Content, Footer, Button, Icon, Text } from 'native-b
 import {Actions} from 'react-native-router-flux'
 import FooterTabs from '../ui/templates/FooterTabs'
 class Home extends Component {
+    static navigationOptions = {
+        header:null
+      };
     render() {
         return (
             <Container>

@@ -5,6 +5,9 @@ import {connect} from 'react-redux';
 import { Actions } from 'react-native-router-flux';
 
 class RepoInfo extends Component{
+  static navigationOptions = {
+    header:null
+  };
   render(){
     return(
       <Container>

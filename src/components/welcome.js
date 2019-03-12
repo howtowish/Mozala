@@ -3,6 +3,9 @@ import { Container, Content, Header, Left, Right, Body, Title, Text, Button, Car
 import { Actions } from 'react-native-router-flux';
 import FooterTabs from '../ui/templates/FooterTabs'
  class Welcome extends Component {
+    static navigationOptions = {
+        header:null
+      };
     render() {
         return (
             <Container>

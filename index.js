@@ -10,6 +10,7 @@ import allReducers from './src/reducers/index.js';
 import thunk from 'redux-thunk'
 import {createStore, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
+import Main from './src/components/main';
 const store = createStore(allReducers, applyMiddleware(thunk));
 
 export default class NativeBaseRedux extends Component {
