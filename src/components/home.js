@@ -11,7 +11,7 @@ class Home extends Component {
             <Container>
                 <Header />
                 <Content />
-             <FooterTabs />
+
             </Container>
         );
     }

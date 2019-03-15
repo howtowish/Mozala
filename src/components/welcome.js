@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container, Content, Header, Left, Right, Body, Title, Text, Button, Card, CardItem } from 'native-base';
 import { Actions } from 'react-native-router-flux';
 import FooterTabs from '../ui/templates/FooterTabs'
+import { StatusBar } from 'react-native';
  class Welcome extends Component {
     static navigationOptions = {
         header:null
@@ -9,6 +10,7 @@ import FooterTabs from '../ui/templates/FooterTabs'
     render() {
         return (
             <Container>
+                <StatusBar barStyle="light-content" backgroundColor="transparent" translucent={true}/>
                 <Header>
                     <Left />
                     <Body>
@@ -33,7 +35,7 @@ import FooterTabs from '../ui/templates/FooterTabs'
                       <Text> Fetch Github Repos </Text>
                     </Button>
                 </Content>
-                <FooterTabs />
+                {/* <FooterTabs /> */}
             </Container>
         );
     }

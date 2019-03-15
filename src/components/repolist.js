@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import { Actions } from 'react-native-router-flux';
 import {getRepos, getRepoThunk, repoSelected} from '../actions/index';
+import { StatusBar } from 'react-native';
 
 class RepoList extends Component{
   componentWillMount(){
@@ -13,6 +14,7 @@ class RepoList extends Component{
     if(this.props.repos.length === 0){
     return(
       <Container>
+        <StatusBar barStyle="light-content" backgroundColor="transparent" translucent={true}/>
           <Header>
           <Left>
           <Button transparent onPress= {()=>Actions.pop()}>

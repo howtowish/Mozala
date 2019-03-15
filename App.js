@@ -8,7 +8,7 @@
  */
 
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import { Platform, StyleSheet, Text, View,StatusBar } from 'react-native';
 import {Container,Content } from 'native-base'
 import myTheme from '@theme/variables/material'
 import AppT from './src/App'
@@ -19,11 +19,14 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
+// StatusBar.setTranslucent(true);
+
 type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
       <Container>
+        <StatusBar barStyle="light-content" backgroundColor="transparent" translucent={true}/>
         <AppT />
       </Container>
     );

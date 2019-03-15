@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import { 
     View,
-    Image
+    Image,
+    StatusBar
 } from 'react-native';
 import Welcome from './welcome';
 import RepoInfo from './welcome';
 import TabNavigator from 'react-native-tab-navigator';
 import A from './a';
+import Account from './account';
 export default class Main extends Component {
     constructor(props){
         super(props);
@@ -20,6 +22,7 @@ export default class Main extends Component {
     render() {
         return (
             <View style={{flex:1,backgroundColor:''}}>
+                <StatusBar barStyle="light-content" backgroundColor="transparent" translucent={true}/>
                 <TabNavigator  tabBarStyle={{backgroundColor:'fff',padding:2}}>
                     <TabNavigator.Item 
                         selected={this.state.selectedTab === 'Welcome'}
@@ -54,13 +57,13 @@ export default class Main extends Component {
                     </TabNavigator.Item>
                     
                     <TabNavigator.Item
-                        selected={this.state.selectedTab === 'RepoInfo'}
-                        //title="Profile"
-                        renderIcon={() => <Image style={{width:26,height:26,resizeMode:'cover'}} source={{uri:'https://png.icons8.com/carbon-copy/2x/settings.png'}} />}
-                        renderSelectedIcon={() => <Image style={{width:26,height:26,resizeMode:'cover'}}  source={{uri:'https://png.icons8.com/nolan/2x/settings.png'}} />}
-                        //badgeText="1"
-                        onPress={() => {this.setState({ selectedTab: 'RepoInfo',selected : false })}}>
-                        {<RepoInfo style={{flex:1}}/>}
+                        selected={this.state.selectedTab === 'Account'}
+                        // title="Profile"
+                        renderIcon={() => <Image style={{width:26,height:26,resizeMode:'cover'}} source={{uri:'https://cdn4.iconfinder.com/data/icons/users-v1/64/person_user_boss-128.png'}} />}
+                        renderSelectedIcon={() => <Image style={{width:26,height:26,resizeMode:'cover'}}  source={{uri:'https://cdn4.iconfinder.com/data/icons/users-v1/64/avatar_person_user-2-128.png'}} />}
+                        // badgeText="1"
+                        onPress={() => {this.setState({ selectedTab: 'Account',selected : false })}}>
+                        {<Account style={{flex: 1}}/>}
                     </TabNavigator.Item>
 
                     

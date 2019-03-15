@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Content, Header, Left, Right, Body, Title, Text, Button, List, ListItem, Icon} from 'native-base';
 import {connect} from 'react-redux';
+import { StatusBar } from 'react-native';
 
 import { Actions } from 'react-native-router-flux';
 
@@ -11,6 +12,7 @@ class RepoInfo extends Component{
   render(){
     return(
       <Container>
+        <StatusBar barStyle="light-content" backgroundColor="transparent" translucent={true}/>
           <Header>
               <Left>
               <Button transparent onPress= {()=>Actions.pop()}>
