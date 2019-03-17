@@ -9,6 +9,7 @@ import RepoInfo from './welcome';
 import TabNavigator from 'react-native-tab-navigator';
 import A from './a';
 import Account from './account';
+import Home from '../components/home/home'
 export default class Main extends Component {
     constructor(props){
         super(props);
@@ -33,7 +34,7 @@ export default class Main extends Component {
                         //badgeText="1"
                         selected={this.state.selected}
                         onPress={() => this.setState({ selectedTab: 'Welcome',selected:true })}>
-                        {<Welcome />}
+                        {<Home />}
                     </TabNavigator.Item>
                     
                     <TabNavigator.Item
