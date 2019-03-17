@@ -26,7 +26,7 @@ export default class App extends Component<Props> {
   render() {
     return (
       <Container>
-        <StatusBar barStyle="light-content" backgroundColor="transparent" translucent={true}/>
+         <StatusBar hidden />
         <AppT />
       </Container>
     );
