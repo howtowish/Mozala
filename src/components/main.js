@@ -11,6 +11,7 @@ import A from './a';
 import Account from './account';
 import Home from '../components/home/home'
 import Giohang from './giohang';
+import Chat from './chat';
 export default class Main extends Component {
     constructor(props){
         super(props);
@@ -55,7 +56,7 @@ export default class Main extends Component {
                         renderSelectedIcon={() => <Image style={{width:26,height:26,resizeMode:'cover'}}  source={{uri:'https://img.icons8.com/dusk/2x/facebook-messenger.png'}} />}
                         //badgeText="1"
                         onPress={() => {this.setState({ selectedTab: 'Messenger',selected : false })}}>
-                        {<RepoInfo style={{flex:1}}/>}
+                        {<Chat style={{flex:1}}/>}
                     </TabNavigator.Item>
                     
                     <TabNavigator.Item

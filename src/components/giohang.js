@@ -13,12 +13,12 @@ export default class GioHang extends Component {
       basic: true,
       checked : false,
       data: [
-        { key: "1", Anh: 'https://vn-test-11.slatic.net/p/f1381cc89fc2a773882e258c0edae2c5.jpg_80x80Q100.jpg_.webp',TenSP:'Đồng hồ thời trang nam',MoTaSP:"Kiểu máy: Quartz (linh kiện Nhật) Chất liệu vỏ: Thép không gỉ Chất liệu dây: Thép không gỉ (dây lưới) Chất liệu mặt trước: Kính cứng pha khoáng, chống trầy cơ bản",GiaSP:'2000000' }, 
-        { key: "2", Anh: 'https://vn-test-11.slatic.net/p/f1381cc89fc2a773882e258c0edae2c5.jpg_80x80Q100.jpg_.webp',TenSP:'Đồng hồ thời trang nam',MoTaSP:"Kiểu máy: Quartz (linh kiện Nhật) Chất liệu vỏ: Thép không gỉ Chất liệu dây: Thép không gỉ (dây lưới) Chất liệu mặt trước: Kính cứng pha khoáng, chống trầy cơ bản",GiaSP:'2000000' }, 
-        { key: "3", Anh: 'https://vn-test-11.slatic.net/p/f1381cc89fc2a773882e258c0edae2c5.jpg_80x80Q100.jpg_.webp',TenSP:'Đồng hồ thời trang nam',MoTaSP:"Kiểu máy: Quartz (linh kiện Nhật) Chất liệu vỏ: Thép không gỉ Chất liệu dây: Thép không gỉ (dây lưới) Chất liệu mặt trước: Kính cứng pha khoáng, chống trầy cơ bản",GiaSP:'2000000' }, 
-        { key: "4", Anh: 'https://vn-test-11.slatic.net/p/f1381cc89fc2a773882e258c0edae2c5.jpg_80x80Q100.jpg_.webp',TenSP:'Đồng hồ thời trang nam',MoTaSP:"Kiểu máy: Quartz (linh kiện Nhật) Chất liệu vỏ: Thép không gỉ Chất liệu dây: Thép không gỉ (dây lưới) Chất liệu mặt trước: Kính cứng pha khoáng, chống trầy cơ bản",GiaSP:'2000000' }, 
-        { key: "5", Anh: 'https://vn-test-11.slatic.net/p/f1381cc89fc2a773882e258c0edae2c5.jpg_80x80Q100.jpg_.webp',TenSP:'Đồng hồ thời trang nam',MoTaSP:"Kiểu máy: Quartz (linh kiện Nhật) Chất liệu vỏ: Thép không gỉ Chất liệu dây: Thép không gỉ (dây lưới) Chất liệu mặt trước: Kính cứng pha khoáng, chống trầy cơ bản",GiaSP:'2000000' }, 
-        { key: "6", Anh: 'https://vn-test-11.slatic.net/p/f1381cc89fc2a773882e258c0edae2c5.jpg_80x80Q100.jpg_.webp',TenSP:'Đồng hồ thời trang nam',MoTaSP:"Kiểu máy: Quartz (linh kiện Nhật) Chất liệu vỏ: Thép không gỉ Chất liệu dây: Thép không gỉ (dây lưới) Chất liệu mặt trước: Kính cứng pha khoáng, chống trầy cơ bản",GiaSP:'2000000' }, 
+        { key: "1", Anh: 'https://vn-test-11.slatic.net/p/f1381cc89fc2a773882e258c0edae2c5.jpg_80x80Q100.jpg_.webp',TenSP:'Đồng hồ thời trang nam',MoTaSP:"Kiểu máy: Quartz (linh kiện Nhật) Chất liệu vỏ: Thép không gỉ Chất liệu dây: Thép không gỉ (dây lưới) Chất liệu mặt trước: Kính cứng pha khoáng, chống trầy cơ bản",GiaSP:'2000000',check:true }, 
+        { key: "2", Anh: 'https://vn-test-11.slatic.net/p/f1381cc89fc2a773882e258c0edae2c5.jpg_80x80Q100.jpg_.webp',TenSP:'Đồng hồ thời trang nam',MoTaSP:"Kiểu máy: Quartz (linh kiện Nhật) Chất liệu vỏ: Thép không gỉ Chất liệu dây: Thép không gỉ (dây lưới) Chất liệu mặt trước: Kính cứng pha khoáng, chống trầy cơ bản",GiaSP:'2000000' ,check:false }, 
+        { key: "3", Anh: 'https://vn-test-11.slatic.net/p/f1381cc89fc2a773882e258c0edae2c5.jpg_80x80Q100.jpg_.webp',TenSP:'Đồng hồ thời trang nam',MoTaSP:"Kiểu máy: Quartz (linh kiện Nhật) Chất liệu vỏ: Thép không gỉ Chất liệu dây: Thép không gỉ (dây lưới) Chất liệu mặt trước: Kính cứng pha khoáng, chống trầy cơ bản",GiaSP:'2000000' ,check:true }, 
+        { key: "4", Anh: 'https://vn-test-11.slatic.net/p/f1381cc89fc2a773882e258c0edae2c5.jpg_80x80Q100.jpg_.webp',TenSP:'Đồng hồ thời trang nam',MoTaSP:"Kiểu máy: Quartz (linh kiện Nhật) Chất liệu vỏ: Thép không gỉ Chất liệu dây: Thép không gỉ (dây lưới) Chất liệu mặt trước: Kính cứng pha khoáng, chống trầy cơ bản",GiaSP:'2000000' ,check:false }, 
+        { key: "5", Anh: 'https://vn-test-11.slatic.net/p/f1381cc89fc2a773882e258c0edae2c5.jpg_80x80Q100.jpg_.webp',TenSP:'Đồng hồ thời trang nam',MoTaSP:"Kiểu máy: Quartz (linh kiện Nhật) Chất liệu vỏ: Thép không gỉ Chất liệu dây: Thép không gỉ (dây lưới) Chất liệu mặt trước: Kính cứng pha khoáng, chống trầy cơ bản",GiaSP:'2000000' ,check:false }, 
+        { key: "6", Anh: 'https://vn-test-11.slatic.net/p/f1381cc89fc2a773882e258c0edae2c5.jpg_80x80Q100.jpg_.webp',TenSP:'Đồng hồ thời trang nam',MoTaSP:"Kiểu máy: Quartz (linh kiện Nhật) Chất liệu vỏ: Thép không gỉ Chất liệu dây: Thép không gỉ (dây lưới) Chất liệu mặt trước: Kính cứng pha khoáng, chống trầy cơ bản",GiaSP:'2000000',check:false  }, 
       ] 
     };
   }
@@ -63,7 +63,7 @@ export default class GioHang extends Component {
                   </View>
                   <View style={{height:1,backgroundColor:'#EEEEEE',marginTop:5}} />
                   <View style={{flex: 1,elevation:7,flexDirection:'row',alignItems: 'center'}}>
-                      <CheckBox color={'blue'} style={{width:20,height:20,marginRight:10}} checked={this.state.checked} onPress={()=>{this.setState({checked:!this.state.checked})}} color="green"/>
+                      {/* <CheckBox color={'blue'} style={{width:20,height:20,marginRight:10}} checked={data.check} onPress={()=>{data.check=true}} color="green"/> */}
                       <Image 
                         style={{width:60,height:60,resizeMode:'cover',marginLeft: 10}}
                         source={{uri:data.Anh}}
