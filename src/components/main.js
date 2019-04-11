@@ -10,6 +10,7 @@ import TabNavigator from 'react-native-tab-navigator';
 import A from './a';
 import Account from './account';
 import Home from '../components/home/home'
+import Walk from '../components/walk/walk';
 export default class Main extends Component {
     constructor(props){
         super(props);
@@ -44,7 +45,7 @@ export default class Main extends Component {
                         renderSelectedIcon={() => <Image style={{width:26,height:26,resizeMode:'cover'}}  source={{uri:'https://png.icons8.com/plasticine/2x/gender-neutral-user.png'}} />}
                         //badgeText="1"
                         onPress={() => {this.setState({ selectedTab: 'A',selected : false })}}>
-                        {<A style={{flex:1}}/>}
+                        {<Walk />}
                     </TabNavigator.Item>
 
                     <TabNavigator.Item

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Header, Row, Col, Icon, Title, Content, Footer, Button, Body, Text, Left, Right } from 'native-base';
 // import { Actions } from 'react-native-router-flux'
-import { Image, TouchableOpacity, ScrollView } from 'react-native'
+import { Image, TouchableOpacity, ScrollView, FlatList } from 'react-native'
 const rowHeight = 40;
 import HeaderHome from '../../ui/templates/HeaderHome'
 import CarouselHome from '../../ui/templates/Carouse/CarouselHome'
@@ -14,8 +14,13 @@ import CardPopularSearch from '../../ui/templates/CardPopularSearch'
 class Home extends Component {
     constructor(props) {
         super(props);
+        this.renderItem = this.renderItem.bind(this)
 
-
+    }
+    renderItem(data) {
+        return (
+            <CardDealHome />
+        )
     }
 
     render() {
@@ -64,6 +69,7 @@ class Home extends Component {
                     <CardDealHome />
                     <CardDealHome />
                 </Row>
+                <Text>Tìm kiếm phổ biến</Text>
                 <Row>
                     <CardPopularSearch />
                     <CardPopularSearch />
@@ -72,7 +78,15 @@ class Home extends Component {
                     <CardPopularSearch />
                     <CardPopularSearch />
                 </Row>
+                <Text>Bộ sưu tập</Text>
                 <CardCollect />
+                <Text>Dành riêng cho bạn</Text>
+                <FlatList
+                    data={[{ key: 'a' }, { key: 'b' },{ key: 'b' },{ key: 'b' },{ key: 'b' },{ key: 'b' },{ key: 'b' },{ key: 'b' }]}
+                    horizontal={false}
+                    numColumns={2}
+                    renderItem={this.renderItem}
+                />
             </ScrollView>
         );
     }
