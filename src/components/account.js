@@ -7,7 +7,7 @@ import {
     Image,
     Dimensions
 } from 'react-native';
-
+import variables from '../../native-base-theme/variables/material';
 const {width,height} = Dimensions.get('window');
 
 export default class Account extends Component {
@@ -32,7 +32,7 @@ export default class Account extends Component {
             <View  style={{flex:1}}>
                 <StatusBar barStyle="light-content" backgroundColor="transparent" translucent={true}/>
                 <View style={{height:height/5,backgroundColor:this.state.selectedColor}}>
-                    <View style={{height:50,flexDirection:'row',alignItems: 'center',marginTop: 15,marginLeft: 10,}}>
+                    <View style={{height:50,flexDirection:'row',alignItems: 'center',marginTop: 15,marginLeft: 10}}>
                         <Image 
                             style={{width:26,height:26,resizeMode:'cover',borderRadius: 13}}
                             source={{uri:'https://scontent.fsgn5-6.fna.fbcdn.net/v/t1.0-1/c0.0.160.160a/p160x160/50221123_305850343391627_5159029039947579392_n.jpg?_nc_cat=109&_nc_eui2=AeFcmzp4RtXvgaLzN7ovdsi926yZuhRPOOB7sz10la90ohTl-mEcJcoihIZuXMz9QoO8mWoWzlI7fWg47XFwR9y-tB9tUAJtl5tcpUy-Yjrf2A&_nc_oc=AQlzgz5N2CDKeFB8itcmLxxvzI59gH3P_hmcv6QBB0DVLSwc1t5AZyDBollg2EC1Mfw&_nc_ht=scontent.fsgn5-6.fna&oh=ad8d591a137528af0e2d74cd7f9e4a4d&oe=5D50A210'}}
@@ -69,7 +69,7 @@ export default class Account extends Component {
                     
                 </View>
                 <View style={{height:height/3,backgroundColor:'#fff'}}>
-                    <View style={{flexDirection:'row',alignItems:'center',margin:7}}>
+                    <View style={{flexDirection:'row',alignItems:'center',padding: 10}}>
                         <Text style={{color:'black',fontWeight:'bold'}}>Đơn hàng của tôi</Text>
                         <View style={{flex:1,alignItems:'flex-end'}}>
                             <Text style={{color:'red',fontSize:10}}>Xem tất cả đơn hàng ></Text>
@@ -131,7 +131,7 @@ export default class Account extends Component {
                         <Text style={{margin:7,color:'black',fontSize:10,fontWeight:'normal'}}>Kiểm tra kiện hàng</Text>
                         <View style={{flex:1,flexDirection:'row'}}>
                             <Image 
-                                style={{width:40,height:36,resizeMode:'cover',marginLeft: 7,marginRight:7}}
+                                style={{width:36,height:30,resizeMode:'cover',marginLeft: 7,marginRight:7}}
                                 source={{uri:'https://vn-test-11.slatic.net/p/a0affaa0836a47ac00c98ac94f85e995.jpg'}}
                             />
                             <View style={{flex:3}}>
@@ -139,7 +139,7 @@ export default class Account extends Component {
                                 <Text style={{fontSize:10}}>Kiện hàng của bạn đã được giao thành công</Text>
                             </View>
                             <View style={{flex:1}}>
-                                <Text style={{fontSize:12}}>10:00 thg 3 14</Text>
+                                <Text style={{fontSize:11}}>10:00 thg 3 14</Text>
                             </View>
                         </View>
                     </View>

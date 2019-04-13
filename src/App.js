@@ -1,12 +1,13 @@
 // RNRF logic here
 import React, { Component } from 'react';
 import { Router, Scene } from 'react-native-router-flux';
+import {StatusBar} from 'react-native'
 import Welcome from './components/welcome.js';
 import RepoList from './components/repolist.js';
 import RepoInfo from './components/repoinfo.js';
 import Main from './components/main';
 import * as contants from './constants'
-import Home from './components/home'
+import Home from './components/home/home'
 export default class App extends Component{
   render(){
     return(

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Container, Header, Content, Footer, Button, Icon, Text } from 'native-base';
 import {Actions} from 'react-native-router-flux'
-import FooterTabs from '../ui/templates/FooterTabs'
-class Home extends Component {
+// import FooterTabs from '../ui/templates/FooterTabs'
+class home11 extends Component {
     static navigationOptions = {
         header:null
       };
@@ -16,4 +16,4 @@ class Home extends Component {
         );
     }
 }
-export default Home
+export default home11
