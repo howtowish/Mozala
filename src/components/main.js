@@ -48,8 +48,6 @@ export default class Main extends Component {
                         //badgeText="1"
                         onPress={() => {this.setState({ selectedTab: 'A',selected : false })}}>
                         {<Walk />}
-                        onPress={() => {this.setState({ selectedTab: 'Page',selected : false })}}>
-                        {<A style={{flex:1}}/>}
                     </TabNavigator.Item>
 
                     <TabNavigator.Item
