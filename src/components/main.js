@@ -39,17 +39,18 @@ export default class Main extends Component {
                         onPress={() => this.setState({ selectedTab: 'Home',selected:true })}>
                         {<Home />}
                     </TabNavigator.Item>
-                    
-                    <TabNavigator.Item
+                    <TabNavigator.Item 
                         selected={this.state.selectedTab === 'Page'}
-                        //title="Profile"
+                        //title="Home"
+                        
                         renderIcon={() => <Image style={{width:26,height:26,resizeMode:'cover'}} source={{uri:'https://img.icons8.com/wired/2x/browser-window.png'}} />}
                         renderSelectedIcon={() => <Image style={{width:26,height:26,resizeMode:'cover'}}  source={{uri:'https://img.icons8.com/dusk/2x/browser-window.png'}} />}
                         //badgeText="1"
-                        onPress={() => {this.setState({ selectedTab: 'A',selected : false })}}>
+              
+                        onPress={() => this.setState({ selectedTab: 'Page',selected:false })}> 
                         {<Walk />}
                     </TabNavigator.Item>
-
+                    
                     <TabNavigator.Item
                         selected={this.state.selectedTab === 'Messenger'}
                         //title="Profile"
