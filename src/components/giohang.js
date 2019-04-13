@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { ListView, Dimensions,View,Image,FlatList,TouchableOpacity } from 'react-native';
 import { Container, Header, Content, Button, Icon, List, ListItem, Text, Card, CardItem,SwipeRow,CheckBox,Body } from 'native-base';
 import NumberFormat from 'react-number-format';
-
+import { showMessage, hideMessage } from "react-native-flash-message";
+import FlashMessage from "react-native-flash-message";
 const {width,height}  = Dimensions.get('window');
 console.disableYellowBox=true;
 export default class GioHang extends Component {
@@ -13,14 +14,18 @@ export default class GioHang extends Component {
       basic: true,
       checked : false,
       data: [
-        { key: "1", Anh: 'https://vn-test-11.slatic.net/p/f1381cc89fc2a773882e258c0edae2c5.jpg_80x80Q100.jpg_.webp',TenSP:'Đồng hồ thời trang nam',MoTaSP:"Kiểu máy: Quartz (linh kiện Nhật) Chất liệu vỏ: Thép không gỉ Chất liệu dây: Thép không gỉ (dây lưới) Chất liệu mặt trước: Kính cứng pha khoáng, chống trầy cơ bản",GiaSP:'2000000',check:true }, 
-        { key: "2", Anh: 'https://vn-test-11.slatic.net/p/f1381cc89fc2a773882e258c0edae2c5.jpg_80x80Q100.jpg_.webp',TenSP:'Đồng hồ thời trang nam',MoTaSP:"Kiểu máy: Quartz (linh kiện Nhật) Chất liệu vỏ: Thép không gỉ Chất liệu dây: Thép không gỉ (dây lưới) Chất liệu mặt trước: Kính cứng pha khoáng, chống trầy cơ bản",GiaSP:'2000000' ,check:false }, 
-        { key: "3", Anh: 'https://vn-test-11.slatic.net/p/f1381cc89fc2a773882e258c0edae2c5.jpg_80x80Q100.jpg_.webp',TenSP:'Đồng hồ thời trang nam',MoTaSP:"Kiểu máy: Quartz (linh kiện Nhật) Chất liệu vỏ: Thép không gỉ Chất liệu dây: Thép không gỉ (dây lưới) Chất liệu mặt trước: Kính cứng pha khoáng, chống trầy cơ bản",GiaSP:'2000000' ,check:true }, 
-        { key: "4", Anh: 'https://vn-test-11.slatic.net/p/f1381cc89fc2a773882e258c0edae2c5.jpg_80x80Q100.jpg_.webp',TenSP:'Đồng hồ thời trang nam',MoTaSP:"Kiểu máy: Quartz (linh kiện Nhật) Chất liệu vỏ: Thép không gỉ Chất liệu dây: Thép không gỉ (dây lưới) Chất liệu mặt trước: Kính cứng pha khoáng, chống trầy cơ bản",GiaSP:'2000000' ,check:false }, 
-        { key: "5", Anh: 'https://vn-test-11.slatic.net/p/f1381cc89fc2a773882e258c0edae2c5.jpg_80x80Q100.jpg_.webp',TenSP:'Đồng hồ thời trang nam',MoTaSP:"Kiểu máy: Quartz (linh kiện Nhật) Chất liệu vỏ: Thép không gỉ Chất liệu dây: Thép không gỉ (dây lưới) Chất liệu mặt trước: Kính cứng pha khoáng, chống trầy cơ bản",GiaSP:'2000000' ,check:false }, 
-        { key: "6", Anh: 'https://vn-test-11.slatic.net/p/f1381cc89fc2a773882e258c0edae2c5.jpg_80x80Q100.jpg_.webp',TenSP:'Đồng hồ thời trang nam',MoTaSP:"Kiểu máy: Quartz (linh kiện Nhật) Chất liệu vỏ: Thép không gỉ Chất liệu dây: Thép không gỉ (dây lưới) Chất liệu mặt trước: Kính cứng pha khoáng, chống trầy cơ bản",GiaSP:'2000000',check:false  }, 
-      ] 
+        { key: "1", Anh: 'https://vn-test-11.slatic.net/p/f1381cc89fc2a773882e258c0edae2c5.jpg_80x80Q100.jpg_.webp',TenSP:'Đồng hồ thời trang nam 1',MoTaSP:"Kiểu máy: Quartz (linh kiện Nhật) Chất liệu vỏ: Thép không gỉ Chất liệu dây: Thép không gỉ (dây lưới) Chất liệu mặt trước: Kính cứng pha khoáng, chống trầy cơ bản",GiaSP:2000000,check:true }, 
+        { key: "2", Anh: 'https://vn-test-11.slatic.net/p/f1381cc89fc2a773882e258c0edae2c5.jpg_80x80Q100.jpg_.webp',TenSP:'Đồng hồ thời trang nam 2',MoTaSP:"Kiểu máy: Quartz (linh kiện Nhật) Chất liệu vỏ: Thép không gỉ Chất liệu dây: Thép không gỉ (dây lưới) Chất liệu mặt trước: Kính cứng pha khoáng, chống trầy cơ bản",GiaSP:2000000 ,check:false }, 
+        { key: "3", Anh: 'https://vn-test-11.slatic.net/p/f1381cc89fc2a773882e258c0edae2c5.jpg_80x80Q100.jpg_.webp',TenSP:'Đồng hồ thời trang nam 3',MoTaSP:"Kiểu máy: Quartz (linh kiện Nhật) Chất liệu vỏ: Thép không gỉ Chất liệu dây: Thép không gỉ (dây lưới) Chất liệu mặt trước: Kính cứng pha khoáng, chống trầy cơ bản",GiaSP:2000000 ,check:true }, 
+        { key: "4", Anh: 'https://vn-test-11.slatic.net/p/f1381cc89fc2a773882e258c0edae2c5.jpg_80x80Q100.jpg_.webp',TenSP:'Đồng hồ thời trang nam 4',MoTaSP:"Kiểu máy: Quartz (linh kiện Nhật) Chất liệu vỏ: Thép không gỉ Chất liệu dây: Thép không gỉ (dây lưới) Chất liệu mặt trước: Kính cứng pha khoáng, chống trầy cơ bản",GiaSP:2000000 ,check:false }, 
+        { key: "5", Anh: 'https://vn-test-11.slatic.net/p/f1381cc89fc2a773882e258c0edae2c5.jpg_80x80Q100.jpg_.webp',TenSP:'Đồng hồ thời trang nam 5',MoTaSP:"Kiểu máy: Quartz (linh kiện Nhật) Chất liệu vỏ: Thép không gỉ Chất liệu dây: Thép không gỉ (dây lưới) Chất liệu mặt trước: Kính cứng pha khoáng, chống trầy cơ bản",GiaSP:2000000 ,check:false }, 
+        { key: "6", Anh: 'https://vn-test-11.slatic.net/p/f1381cc89fc2a773882e258c0edae2c5.jpg_80x80Q100.jpg_.webp',TenSP:'Đồng hồ thời trang nam 6',MoTaSP:"Kiểu máy: Quartz (linh kiện Nhật) Chất liệu vỏ: Thép không gỉ Chất liệu dây: Thép không gỉ (dây lưới) Chất liệu mặt trước: Kính cứng pha khoáng, chống trầy cơ bản",GiaSP:2000000,check:false  }, 
+      ],
+      tien : 0
     };
+  }
+  componentWillMount(){
+    this.ThanhToan();
   }
   _renderList(){
     if(this.state.data.length<1){
@@ -33,8 +38,9 @@ export default class GioHang extends Component {
     const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
     return(
       <Container style={{flex:10}}>
-        
+
           <Content>
+          
           <View style={{height:height/20,backgroundColor:'#fff',justifyContent:'center',padding: 10,marginBottom: 15,elevation:7}}>
             <View style={{flexDirection:'row'}}>
                 <Image
@@ -109,7 +115,9 @@ export default class GioHang extends Component {
             />
             
           </Content>
+          
         </Container>
+        
     )
   }
   removeItem(key) {
@@ -117,16 +125,36 @@ export default class GioHang extends Component {
     data = data.filter((item) => item.key !== key)
     this.setState({ data })
   }
-  deleteRow(secId, rowId, rowMap) {
-    rowMap[`${secId}${rowId}`].props.closeRow();
-    const newData = [...this.state.data];
-    newData.splice(rowId, 1);
-    this.setState({ data: newData });
+  ThanhToan(){
+    let tien = 0;
+    this.state.data.forEach(i=>{
+      tien += i.GiaSP
+    })
+    this.setState({tien})
   }
+
+  async deleteRow(secId, rowId, rowMap) {
+    // alert('da xoa ' + this.state.data[rowId].TenSP);
+    showMessage({
+      message: "Thông báo",
+      description: "Đã xóa " + this.state.data[rowId].TenSP,
+      type: "info",
+      color : '#fff'
+    });
+   
+    await rowMap[`${secId}${rowId}`].props.closeRow();
+    const newData = [...this.state.data];
+    await newData.splice(rowId, 1);
+    await this.setState({ data: newData });
+    await this.ThanhToan();
+    // setTimeout(()=>this.ThanhToan(),0); 
+  }
+  
   render() {
     
     return (
       <View style={{flex:1}}>
+        
         <View style={{}}>
           <View style={{height:height/14,backgroundColor:'#FF3300',justifyContent:'center',alignItems: 'center'}}>
             <Text style={{color:'#fff',fontSize:12,fontWeight:'bold'}}>Giỏ hàng của tôi ({this.state.data.length})</Text>
@@ -134,7 +162,17 @@ export default class GioHang extends Component {
           
         </View>
         {this._renderList()}
-        <View style={{flex:1,backgroundColor:'yellow'}}></View>
+        <View style={{flex:1,backgroundColor:'yellow',flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
+          <Text style={{color:'blue'}}>Tổng tiền : </Text>
+          <NumberFormat
+            value={this.state.tien}
+            displayType={'text'}
+            thousandSeparator={true}
+            suffix={' đ'}
+            renderText={value => <Text style={{color:'red',fontSize:14,fontWeight:'bold'}}>{value}</Text>} 
+          /> 
+        </View>
+        <FlashMessage position="top" floating={true} duration={1000} icon={'success'}  /> 
       </View>
       
     );

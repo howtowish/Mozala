@@ -84,12 +84,8 @@ export default class Chat extends React.Component {
         messages: GiftedChat.append(previousState.messages, messages),
       };
     });
-    // var x = Math.floor(Math.random() * 3)
-    // for demo purpose
-    this.answerDemo(messages);
-    // this.onReceive(this.state.m[this.state.dem]);
-    // this.setState({dem:this.state.dem+1});
-    // this.onReceive('I am Funny. Nice to meet you !');
+
+    // this.answerDemo(messages);
   }
   
   answerDemo(messages) {

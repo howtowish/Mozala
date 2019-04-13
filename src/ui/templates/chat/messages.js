@@ -16,7 +16,7 @@ module.exports = [
     // },
     {
       _id: Math.round(Math.random() * 1000000),
-      text: 'Hello. Can you say some thing with me ?',
+      text: 'Chào bạn. Cảm ơn bạn đã quan tâm đến sản phẩm của chúng tôi. Hãy để lại lời nhắn nếu bạn cần giúp đỡ. Chúng tôi sẽ trả lời bạn trong thời gian sớm nhất !',
       createdAt: new Date(),
       user: {
         _id: 2,
