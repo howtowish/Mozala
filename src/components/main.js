@@ -4,10 +4,10 @@ import {
     Image,
     StatusBar
 } from 'react-native';
-import Welcome from './welcome';
-import RepoInfo from './welcome';
+// import Welcome from './welcome';
+// import RepoInfo from './welcome';
 import TabNavigator from 'react-native-tab-navigator';
-import A from './a';
+// import A from './a';
 import Account from './account';
 import Home from '../components/home/home'
 import Walk from '../components/walk/walk';

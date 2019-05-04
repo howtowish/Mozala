@@ -1,21 +1,25 @@
 import React, { Component } from 'react';
 import { Container, Header, Row, Col, Icon, Title, Content, Footer, Button, Body, Text, Left, Right } from 'native-base';
 // import { Actions } from 'react-native-router-flux'
-import { Image, TouchableOpacity, ScrollView, FlatList } from 'react-native'
+import { Image, TouchableOpacity, ScrollView, FlatList,View,Dimensions } from 'react-native'
 const rowHeight = 40;
 import HeaderHome from '../../ui/templates/HeaderHome'
-import CarouselHome from '../../ui/templates/Carouse/CarouselHome'
+// import CarouselHome from '../../ui/templates/Carouse/CarouselHome'
 import CardCollect from '../../ui/templates/CardCollect'
 // import {} from '../../../native-base-theme/components/Header'
 import image1 from '../../ui/assets/images/1.png'
 import variables from '../../../native-base-theme/variables/material'
 import CardDealHome from '../../ui/templates/CardDealHome'
 import CardPopularSearch from '../../ui/templates/CardPopularSearch'
+
+
+import Swiper from 'react-native-swiper'
+const deviceWidth = Dimensions.get('window').width
 class Home extends Component {
     constructor(props) {
         super(props);
         this.renderItem = this.renderItem.bind(this)
-
+ 
     }
     renderItem(data) {
         return (
@@ -27,9 +31,26 @@ class Home extends Component {
 
         return (
             <ScrollView contentContainerStyle={{ paddingVertical: 20 }}>
-
-                <HeaderHome />
-                <CarouselHome />
+                
+                <HeaderHome /> 
+                {/* <CarouselHome /> */}
+                <Swiper style={{height:variables.scale(300),width:deviceWidth*0.9,alignSelf:'center',marginBottom:variables.scale(50)}} showsButtons={true} autoplay={true} autoplayTimeout={5}>
+                    <View style={{flex:1}}>
+                        <Image style={{height:variables.scale(500),width:null,resizeMode:"contain"}} source={require('@assets/images/poster02.jpg')} />
+                    </View>
+                    <View style={{flex:1}}>
+                        <Image style={{height:variables.scale(500),width:null,resizeMode:"contain"}} source={require('@assets/images/poster02.jpg')} />
+                    </View>
+                    <View style={{flex:1}}>
+                        <Image style={{height:variables.scale(500),width:null,resizeMode:"contain"}} source={require('@assets/images/poster02.jpg')} />
+                    </View>
+                    <View style={{flex:1}}>
+                        <Image style={{height:variables.scale(500),width:null,resizeMode:"contain"}} source={require('@assets/images/poster02.jpg')} />
+                    </View>
+                    <View style={{flex:1}}>
+                        <Image style={{height:variables.scale(500),width:null,resizeMode:"contain"}} source={require('@assets/images/poster02.jpg')} />
+                    </View>
+              </Swiper>
                 <Row style={{}}>
                     <Col style={{ alignItems: "center" }}>
                         <TouchableOpacity style={{ width: variables.scale(100), height: variables.scale(100), backgroundColor: "red", borderRadius: variables.scale(100) / 2, alignItems: "center", justifyContent: "center" }}>

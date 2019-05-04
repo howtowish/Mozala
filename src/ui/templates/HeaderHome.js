@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Row } from 'native-base';
 // import { Actions } from 'react-native-router-flux'
-import Search from 'react-native-search-box';
-import { View } from 'react-native'
+import { View, TextInput } from 'react-native'
 import variables from '../../../native-base-theme/variables/material'
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
 class HeaderHome extends Component {
@@ -11,16 +10,14 @@ class HeaderHome extends Component {
         // const { search } = this.state;
         return (
             <View style={{ flex: 0.3 }}>
-                <View style={{ flex: 1, backgroundColor: "red" }}>
+                <View style={{ flex: 1 }}>
 
                     <Row style={{ alignItems: "center" }}>
                         <View style={{ marginLeft: variables.scale(20), marginRight: variables.scale(20) }}>
                             <Icon size={variables.scale(40)} name="camera" />
-                        </View>
+                        </View> 
                         <View style={{ flex: 1 }}>
-                            <Search
-                                ref="search_box"
-                            />
+                            <TextInput style={{ textAlign:"center",backgroundColor: "white", borderRadius: 5 }} placeholder="Search" />
                         </View>
                         <View style={{ marginLeft: variables.scale(20), marginRight: variables.scale(20) }}>
                             <Icon size={variables.scale(40)} name="camera" />
@@ -43,7 +40,7 @@ class HeaderHome extends Component {
                 }} >
 
                 </View> */}
-            
+
             </View>
         );
     }
