@@ -15,6 +15,7 @@ import CardPopularSearch from '../../ui/templates/CardPopularSearch'
 
 import Swiper from 'react-native-swiper'
 const deviceWidth = Dimensions.get('window').width
+const deviceHeight = Dimensions.get('window').height
 class Home extends Component {
     constructor(props) {
         super(props);
@@ -30,28 +31,12 @@ class Home extends Component {
     render() {
 
         return (
-            <ScrollView contentContainerStyle={{ paddingVertical: 20 }}>
+            <ScrollView contentContainerStyle={{backgroundColor:"white" }}>
                 
                 <HeaderHome /> 
                 {/* <CarouselHome /> */}
-                <Swiper style={{height:variables.scale(300),width:deviceWidth*0.9,alignSelf:'center',marginBottom:variables.scale(50)}} showsButtons={true} autoplay={true} autoplayTimeout={5}>
-                    <View style={{flex:1}}>
-                        <Image style={{height:variables.scale(500),width:null,resizeMode:"contain"}} source={require('@assets/images/poster02.jpg')} />
-                    </View>
-                    <View style={{flex:1}}>
-                        <Image style={{height:variables.scale(500),width:null,resizeMode:"contain"}} source={require('@assets/images/poster02.jpg')} />
-                    </View>
-                    <View style={{flex:1}}>
-                        <Image style={{height:variables.scale(500),width:null,resizeMode:"contain"}} source={require('@assets/images/poster02.jpg')} />
-                    </View>
-                    <View style={{flex:1}}>
-                        <Image style={{height:variables.scale(500),width:null,resizeMode:"contain"}} source={require('@assets/images/poster02.jpg')} />
-                    </View>
-                    <View style={{flex:1}}>
-                        <Image style={{height:variables.scale(500),width:null,resizeMode:"contain"}} source={require('@assets/images/poster02.jpg')} />
-                    </View>
-              </Swiper>
-                <Row style={{}}>
+               
+                <Row style={{marginTop:variables.scale(30)}}>
                     <Col style={{ alignItems: "center" }}>
                         <TouchableOpacity style={{ width: variables.scale(100), height: variables.scale(100), backgroundColor: "red", borderRadius: variables.scale(100) / 2, alignItems: "center", justifyContent: "center" }}>
                             <Image style={{ width: variables.scale(50), height: variables.scale(50), resizeMode: 'cover' }} source={image1} />
@@ -103,7 +88,7 @@ class Home extends Component {
                 <CardCollect />
                 <Text>Dành riêng cho bạn</Text>
                 <FlatList
-                    data={[{ key: 'a' }, { key: 'b' },{ key: 'b' },{ key: 'b' },{ key: 'b' },{ key: 'b' },{ key: 'b' },{ key: 'b' }]}
+                    data={[{ key: 'a' }, { key: 'b' },{ key: 'b' },{ key: 'b' }]}
                     horizontal={false}
                     numColumns={2}
                     renderItem={this.renderItem}
