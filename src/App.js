@@ -8,6 +8,7 @@ import RepoInfo from './components/repoinfo.js';
 import Main from './components/main';
 import * as contants from './constants'
 import Home from './components/home/home'
+import Help from './ui/templates/account/help';
 export default class App extends Component{
   render(){
     return(
@@ -17,6 +18,7 @@ export default class App extends Component{
           <Scene key="wellcome" component={Welcome} title="Welcome"  />
           <Scene key="RepoList" component={RepoList} title="RepoList" />
           <Scene key="RepoInfo" component={RepoInfo} title="RepoInfo" />
+          <Scene key="Help" component={Help} title='Cancel' leftTitle="Cancel"/>
         </Scene>
       </Router>
     );

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component,PureComponent } from 'react';
 import { 
     View,
     Text,
@@ -7,7 +7,8 @@ import {
     Image,
     Dimensions
 } from 'react-native';
-import variables from '../../native-base-theme/variables/material';
+// import variables from '../../native-base-theme/variables/material';
+import {Actions} from 'react-native-router-flux';
 const {width,height} = Dimensions.get('window');
 
 export default class Account extends Component {
@@ -17,15 +18,16 @@ export default class Account extends Component {
             'blue',
             'yellow',
             'lightblue',
-            'gray',
-            '#fff',
-            'black'
+            'gray'
           ],
           selectedColor: 'red'
      }
     randomBRStatusbar(){
         var item = this.state.br[Math.floor(Math.random()*this.state.br.length)];
         this.setState({selectedColor: item});
+    }
+    componentDidMount(){
+        this.randomBRStatusbar();
     }
     render() {
         return (
@@ -39,32 +41,32 @@ export default class Account extends Component {
                         />
                         <View style={{marginLeft: 5}}>
                             <Text style={{color:'#fff',fontWeight:'bold',fontSize: 12}}>Hinh Văn</Text>
-                            <Text style={{color:'#fff',fontSize: 10,fontWeight:'bold'}}>Thêm số điện thoại để bảo mật tài khoản ></Text>
+                            <TouchableOpacity><Text style={{color:'#fff',fontSize: 10,fontWeight:'bold'}}>Thêm số điện thoại để bảo mật tài khoản ></Text></TouchableOpacity>
                         </View>
-                        <View style={{flex:1,alignItems:'flex-end',marginRight: 10,}}>
+                        <TouchableOpacity style={{flex:1,alignItems:'flex-end',marginRight: 10,}}>
                             <Image 
                                 style={{width:16,height:16,resizeMode:'cover',borderRadius: 13}}
                                 source={{uri:'https://img.icons8.com/ios/2x/settings.png'}}
                             />
-                        </View>
+                        </TouchableOpacity>
                         
                     </View>
                     <View style={{flex:1,flexDirection:'row',alignItems: 'center',justifyContent: 'center'}}>
-                        <View style={{flex:1,justifyContent:"center",alignItems:'center'}}>
+                        <TouchableOpacity style={{flex:1,justifyContent:"center",alignItems:'center'}}>
                             <Text style={{color:'#fff',fontWeight:'bold',fontSize: 15}}>0</Text>
                             <Text style={{color:'#fff',fontSize:10}}>Yêu thích</Text>
                             <Text style={{color:'#fff',fontSize:10}}>của tôi</Text>
-                        </View>
-                        <View style={{flex:1,justifyContent:"center",alignItems:'center'}}>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{flex:1,justifyContent:"center",alignItems:'center'}}>
                             <Text style={{color:'#fff',fontWeight:'bold',fontSize: 15}}>0</Text>
                             <Text style={{color:'#fff',fontSize:10}}>Gian hàng</Text>
                             <Text style={{color:'#fff',fontSize:10}}>đã theo dõi</Text>
-                        </View>
-                        <View style={{flex:1,justifyContent:"center",alignItems:'center'}}>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{flex:1,justifyContent:"center",alignItems:'center'}}>
                             <Text style={{color:'#fff',fontWeight:'bold',fontSize: 15}}>1</Text>
                             <Text style={{color:'#fff',fontSize:10}}>Mã giảm</Text>
                             <Text style={{color:'#fff',fontSize:10}}>giá</Text>
-                        </View>
+                        </TouchableOpacity>
                     </View>
                     
                 </View>
@@ -72,35 +74,35 @@ export default class Account extends Component {
                     <View style={{flexDirection:'row',alignItems:'center',padding: 10}}>
                         <Text style={{color:'black',fontWeight:'bold'}}>Đơn hàng của tôi</Text>
                         <View style={{flex:1,alignItems:'flex-end'}}>
-                            <Text style={{color:'red',fontSize:10}}>Xem tất cả đơn hàng ></Text>
+                            <TouchableOpacity><Text style={{color:'red',fontSize:10}}>Xem tất cả đơn hàng ></Text></TouchableOpacity>
                         </View>
                     </View>
                     <View style={{flex:2,flexDirection:'row',alignItems: 'center',justifyContent: 'center'}}>
-                        <View style={{flex:1,justifyContent:"center",alignItems:'center'}}>
+                        <TouchableOpacity style={{flex:1,justifyContent:"center",alignItems:'center'}}>
                             <Image 
                                 style={{width:26,height:26,resizeMode:'cover'}}
                                 source={{uri:'https://img.icons8.com/dusk/2x/horizontal-settings-mixer-filled.png'}}
                             />
                             <Text style={{color:'black',fontSize:10,marginTop:8}}>Chờ</Text>
                             <Text style={{color:'black',fontSize:10}}>thanh toán</Text>
-                        </View>
-                        <View style={{flex:1,justifyContent:"center",alignItems:'center'}}>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{flex:1,justifyContent:"center",alignItems:'center'}}>
                             <Image 
                                 style={{width:26,height:26,resizeMode:'cover'}}
                                 source={{uri:'https://img.icons8.com/nolan/2x/pictures-folder.png'}}
                             />
                             <Text style={{color:'black',fontSize:10,marginTop:8}}>Chờ</Text>
                             <Text style={{color:'black',fontSize:10}}>vận chuyển</Text>
-                        </View>
-                        <View style={{flex:1,justifyContent:"center",alignItems:'center'}}>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{flex:1,justifyContent:"center",alignItems:'center'}}>
                             <Image 
                                 style={{width:26,height:26,resizeMode:'cover'}}
                                 source={{uri:'https://img.icons8.com/color/2x/fiat-500.png'}}
                             />
                             <Text style={{color:'black',fontSize:10,marginTop:8}}>Chờ</Text>
                             <Text style={{color:'black',fontSize:10}}>giao hàng</Text>
-                        </View>
-                        <View style={{flex:1,justifyContent:"center",alignItems:'center'}}>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{flex:1,justifyContent:"center",alignItems:'center'}}>
                             
                             <Image 
                                 style={{width:26,height:26,resizeMode:'cover'}}
@@ -109,25 +111,25 @@ export default class Account extends Component {
                             
                             <Text style={{color:'black',fontSize:10,marginTop:8}}>Chưa</Text>
                             <Text style={{color:'black',fontSize:10}}>đánh giá</Text>
-                        </View>
+                        </TouchableOpacity>
                     </View>
                     <View style={{flex:1,backgroundColor:'',flexDirection:'row'}}>
-                        <View style={{flex:1,justifyContent:"center",alignItems:'center',flexDirection: 'row'}}>
+                        <TouchableOpacity style={{flex:1,justifyContent:"center",alignItems:'center',flexDirection: 'row'}}>
                             <Image 
                                 style={{width:16,height:16,resizeMode:'cover'}}
                                 source={{uri:'https://img.icons8.com/dusk/2x/return.png'}}
                             />
                             <Text style={{color:'black',fontSize:10,marginLeft:7}}>Đơn hàng đổi trả</Text>
-                        </View>
-                        <View style={{flex:1,justifyContent:"center",alignItems:'center',flexDirection: 'row'}}>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{flex:1,justifyContent:"center",alignItems:'center',flexDirection: 'row'}}>
                             <Image 
                                 style={{width:16,height:16,resizeMode:'cover'}}
                                 source={{uri:'https://img.icons8.com/color/2x/delete-property.png'}}
                             />
                             <Text style={{color:'black',fontSize:10,marginLeft:7}}>Đơn hàng đã hủy</Text>
-                        </View>
+                        </TouchableOpacity>
                     </View>
-                    <View style={{flex:2,backgroundColor:'#EEEEEE',margin:10,justifyContent:'center'}}>
+                    <TouchableOpacity style={{flex:2,backgroundColor:'#EEEEEE',margin:10,justifyContent:'center'}}>
                         <Text style={{margin:7,color:'black',fontSize:10,fontWeight:'normal'}}>Kiểm tra kiện hàng</Text>
                         <View style={{flex:1,flexDirection:'row'}}>
                             <Image 
@@ -142,67 +144,67 @@ export default class Account extends Component {
                                 <Text style={{fontSize:11}}>10:00 thg 3 14</Text>
                             </View>
                         </View>
-                    </View>
+                    </TouchableOpacity>
                 </View>
-                <View style={{height:height/4,backgroundColor:'#fff',marginTop:13,padding:7}}>
+                <View style={{height:height/4-5,backgroundColor:'#fff',marginTop:13,padding:7}}>
                     <View style={{borderBottomWidth:1,borderColor:'#EEEEEE',justifyContent:'center',padding:7}}>
                         <Text style={{color:'black',fontWeight:'bold'}}>Dịch vụ của tôi</Text>
                     </View>
                     <View style={{borderBottomWidth:1,borderColor:'#EEEEEE',flex:1,justifyContent:'center',flexDirection: 'row'}}>
-                        <View style={{flex:1,flexDirection: 'row',padding:7,borderRightWidth: 1,borderColor:'#EEEEEE'}}>
+                        <TouchableOpacity style={{flex:1,flexDirection: 'row',padding:4,borderRightWidth: 1,borderColor:'#EEEEEE'}}>
                             <Text style={{fontSize:12}}>Tin nhắn</Text>
                             <View style={{flex:1,alignItems:'flex-end'}}>
                                 <Text style={{fontSize:12}}>></Text>
                             </View>
-                        </View>
-                        <View style={{flex:1,flexDirection: 'row',padding:7}}>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{flex:1,flexDirection: 'row',padding:4}}>
                             <Text style={{fontSize:12}}>Đánh giá của tôi</Text>
                             <View style={{flex:1,alignItems:'flex-end'}}>
                                 <Text style={{fontSize:12}}>></Text>
                             </View>
-                        </View>
+                        </TouchableOpacity>
                     </View>
                     <View style={{borderBottomWidth:1,borderColor:'#EEEEEE',flex:1,justifyContent:'center',flexDirection: 'row'}}>
-                        <View style={{flex:1,flexDirection: 'row',padding:7,borderRightWidth: 1,borderColor:'#EEEEEE'}}>
+                        <TouchableOpacity style={{flex:1,flexDirection: 'row',padding:4,borderRightWidth: 1,borderColor:'#EEEEEE'}}>
                             <Text style={{fontSize:12}}>Tùy chọn thanh toán</Text>
                             <View style={{flex:1,alignItems:'flex-end'}}>
                                 <Text style={{fontSize:12}}>></Text>
                             </View>
-                        </View>
-                        <View style={{flex:1,flexDirection: 'row',padding:7}}>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{flex:1,flexDirection: 'row',padding:4}}>
                             <Text style={{fontSize:12}}>Chat với CLEO</Text>
                             <View style={{flex:1,alignItems:'flex-end'}}>
                                 <Text style={{fontSize:12}}>></Text>
                             </View>
-                        </View>
+                        </TouchableOpacity>
                     </View>
                     <View style={{borderBottomWidth:1,borderColor:'#EEEEEE',flex:1,justifyContent:'center',flexDirection: 'row'}}>
-                        <View style={{flex:1,flexDirection: 'row',padding:7,borderRightWidth: 1,borderColor:'#EEEEEE'}}>
+                        <TouchableOpacity onPress={()=>Actions.Help()} style={{flex:1,flexDirection: 'row',padding:4,borderRightWidth: 1,borderColor:'#EEEEEE'}}>
                             <Text style={{fontSize:12}}>Trợ giúp</Text>
                             <View style={{flex:1,alignItems:'flex-end'}}>
                                 <Text style={{fontSize:12}}>></Text>
                             </View>
-                        </View>
-                        <View style={{flex:1,flexDirection: 'row',padding:7}}>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{flex:1,flexDirection: 'row',padding:4}}>
                             <Text style={{fontSize:12}}>Miễn phí vận chuyển</Text>
                             <View style={{flex:1,alignItems:'flex-end'}}>
                                 <Text style={{fontSize:12}}>></Text>
                             </View>
-                        </View>
+                        </TouchableOpacity>
                     </View>
                     <View style={{flex:1,justifyContent:'center',flexDirection: 'row'}}>
-                        <View style={{flex:1,flexDirection: 'row',padding:7,borderRightWidth: 1,borderColor:'#EEEEEE'}}>
+                        <TouchableOpacity style={{flex:1,flexDirection: 'row',padding:4,borderRightWidth: 1,borderColor:'#EEEEEE'}}>
                             <Text style={{fontSize:12}}>Bán hàng trên Mozala</Text>
                             <View style={{flex:1,alignItems:'flex-end'}}>
                                 <Text style={{fontSize:12}}>></Text>
                             </View>
-                        </View>
-                        <View style={{flex:1,flexDirection: 'row',padding:7}}>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{flex:1,flexDirection: 'row',padding:4}}>
                             {/* <Text style={{fontSize:12}}>Đánh giá của tôi</Text>
                             <View style={{flex:1,alignItems:'flex-end'}}>
                                 <Text style={{fontSize:12}}>></Text>
                             </View> */}
-                        </View>
+                        </TouchableOpacity>
                     </View>
                     
                 </View>
